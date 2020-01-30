@@ -53,9 +53,9 @@ export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
 # Download and install packer
 [[ -e /tmp/packer ]] && rm /tmp/packer
-wget https://releases.hashicorp.com/packer/1.4.5/packer_1.4.5_linux_amd64.zip \
-    -q -O /tmp/packer_1.4.5_linux_amd64.zip
+wget https://github.com/hashicorp/packer/releases/download/nightly/packer_linux_amd64.zip \
+    -q -O /tmp/packer_linux_amd64.zip
 cd /tmp
-unzip -u packer_1.4.5_linux_amd64.zip
-sudo cp packer /usr/local/bin
+unzip -u packer_linux_amd64.zip
+sudo cp ./pkg/packer_linux_amd64 /usr/local/bin/packer
 cd ..
